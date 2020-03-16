@@ -1,7 +1,22 @@
 {
+  "name": "sqs-example",
+  "version": "1.0.0",
+  "description": "Example SQS with DLQ",
+  "main": "handler.js",
+  "scripts": {
+    "prd": "sls deploy --stage=prd",
+    "dev": "sls deploy --stage=dev",
+    "hml": "sls deploy --stage=hml",
+    "offline": "sls offline --stage=dev"
+  },
+  "keywords": [],
+  "author": "Tristão",
+  "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.639.0",
-    "nodemailer": "^6.4.5",
+    "aws-sdk": "^2.633.0",
+    "nodemailer": "^6.4.5"
+  },
+  "devDependencies": {
     "serverless-offline": "^6.0.0-alpha.67"
   }
 }

@@ -1,8 +1,6 @@
 # SQS-Example
 
-## PROJETO
-
-### Instalação
+### Installation
 
 - npm install / yarn install
 - [AWS CLI](https://aws.amazon.com/pt/cli/)

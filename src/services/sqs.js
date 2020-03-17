@@ -1,5 +1,10 @@
 const AWS = require('aws-sdk');
 
+AWS.config.update({
+    credentials: new AWS.EnvironmentCredentials('AWS'),
+    region: process.env.region
+});
+
 const sqs = new AWS.SQS();
 
 const encodeAttributes = attributesMessage => {

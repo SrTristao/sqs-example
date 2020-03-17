@@ -15,7 +15,6 @@ module.exports.handler = async event => {
         mail
     } = sqs.decodeAttributes(messageAttributes);
 
-
     try {
         switch (type) {
             case 'welcome':

@@ -1,15 +1,15 @@
 service: sqs-example
 
 custom:
-  id: --Adicione o Id da sua cloud
-  region: --Adicione a região que irá subir
+  id: --Add Id Cloud
+  region: --Add Region
 
 provider:
   name: aws
   runtime: nodejs12.x
   stage: ${opt:stage}
   region: ${self:custom.region}
-  role: --Adicione a role com todos as permissoes de Acesso (SQS e SSM)  
+  role: --Add role with SQS and SSM permissions or more services if needed
   tags:
     projectName: sqs-example
     environment: ${opt:stage}

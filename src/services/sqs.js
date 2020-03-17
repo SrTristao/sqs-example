@@ -5,6 +5,7 @@ AWS.config.update({
     region: process.env.region
 });
 
+console.log(process.env.region)
 const sqs = new AWS.SQS();
 
 const encodeAttributes = attributesMessage => {

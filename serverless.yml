@@ -1,15 +1,15 @@
 service: sqs-example
 
 custom:
-  id: --Add Id Cloud
-  region: --Add Region
+  id: 002658803700
+  region: sa-east-1
 
 provider:
   name: aws
   runtime: nodejs12.x
   stage: ${opt:stage}
   region: ${self:custom.region}
-  role: --Add role with SQS and SSM permissions or more services if needed
+  role: arn:aws:iam::002658803700:role/lambda-s3-execution-role
   tags:
     projectName: sqs-example
     environment: ${opt:stage}
@@ -23,8 +23,6 @@ functions:
       - http:
           method: post
           path: dispatchEmail
-      - sqs:
-          url: ${ssm:sqs-example-${opt:stage}-urlQueueSendMail}
     environment:
       urlQueueSendMail: ${ssm:sqs-example-${opt:stage}-urlQueueSendMail}
   sendMail:

@@ -18,6 +18,5 @@
   },
   "devDependencies": {
     "serverless-offline": "^6.0.0-alpha.67"
-  },
-  "type": "module"
+  }
 }

@@ -13,7 +13,7 @@
   "author": "Tristão",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.633.0",
+    "aws-sdk": "^2.814.0",
     "nodemailer": "^6.4.5"
   },
   "devDependencies": {
